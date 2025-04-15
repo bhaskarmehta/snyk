@@ -7,3 +7,15 @@ dependencies:
   - name: kubernetes-monitor
     version: 1.0.0
     repository: https://snyk.github.io/kubernetes-monitor
+
+
+resource "sentry_monitor" "daily_backup" {
+  organization    = "your-org-slug"           # e.g., "acme-corp"
+  project        = sentry_project.api.id     # Reference an existing project
+  name           = "Daily Backup Job"
+  schedule_type  = "crontab"                 # or "interval"
+  schedule       = "0 0 * * *"               # Runs at midnight daily
+  checkin_margin = 5                         # Grace period (minutes)
+  max_runtime    = 30                        # Timeout (minutes)
+  timezone      = "UTC"                      # Optional
+}
