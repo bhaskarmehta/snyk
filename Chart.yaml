@@ -19,3 +19,7 @@ resource "sentry_monitor" "daily_backup" {
   max_runtime    = 30                        # Timeout (minutes)
   timezone      = "UTC"                      # Optional
 }
+
+
+terraform import sentry_rule.example_alert org-slug:project-slug:alert-id
+terraform import sentry_rule.example_alert my-org:my-project:12345
