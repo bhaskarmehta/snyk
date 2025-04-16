@@ -27,3 +27,7 @@ terraform import sentry_rule.example_alert my-org:my-project:12345
 
 curl -H "Authorization: Bearer YOUR_API_TOKEN" \
   "https://sentry.io/api/0/organizations/{org-slug}/monitors/" | jq
+
+terraform import sentry_monitor.example org-slug:project-slug:monitor-id
+
+  
