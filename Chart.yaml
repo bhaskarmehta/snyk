@@ -23,3 +23,7 @@ resource "sentry_monitor" "daily_backup" {
 
 terraform import sentry_rule.example_alert org-slug:project-slug:alert-id
 terraform import sentry_rule.example_alert my-org:my-project:12345
+
+
+curl -H "Authorization: Bearer YOUR_API_TOKEN" \
+  "https://sentry.io/api/0/organizations/{org-slug}/monitors/" | jq
