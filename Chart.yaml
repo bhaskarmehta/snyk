@@ -142,3 +142,9 @@ output "dynamodb_table_name" {
 output "dynamodb_table_arn" {
   value = aws_dynamodb_table.example_table.arn
 }
+
+
+Resource = [
+          aws_dynamodb_table.example_table.arn,
+          "${aws_dynamodb_table.example_table.arn}/index/*" # For any indexes
+        ]
