@@ -148,3 +148,6 @@ Resource = [
           aws_dynamodb_table.example_table.arn,
           "${aws_dynamodb_table.example_table.arn}/index/*" # For any indexes
         ]
+
+
+You are saying that PR is not importable but I have imported two projects in local from sentry using these command and imported teams as well. Can I import all the projects and teams one by one?
