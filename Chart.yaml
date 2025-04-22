@@ -169,3 +169,10 @@ resource "sentry_metric_alert" "uptime_alert" {
   name         = "Uptime Monitoring for https://app.accelerant.ai"  # Must match exactly
 }
 
+--------------------------------------------
+resource "sentry_cron_monitor" "example" {
+  organization = "rx-frontend"
+  project      = "your-project-slug"
+  name         = "Your Cron Monitor Name"
+  # ... other fields ...
+}
