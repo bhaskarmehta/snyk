@@ -150,4 +150,14 @@ Resource = [
         ]
 
 
-You are saying that PR is not importable but I have imported two projects in local from sentry using these command and imported teams as well. Can I import all the projects and teams one by one?
+------------------------------------------------
+
+resource "sentry_rule" "existing_alert" {
+  organization = "your-org-slug"
+  project      = "your-project-slug"
+  team         = "your-team-slug"
+}
+
+
+terraform import sentry_rule.existing_alert your-org-slug/your-project-slug/rule-id
+
