@@ -161,3 +161,11 @@ resource "sentry_rule" "existing_alert" {
 
 terraform import sentry_rule.existing_alert your-org-slug/your-project-slug/rule-id
 
+
+
+resource "sentry_metric_alert" "uptime_alert" {
+  organization = "your-org-slug"      # Replace with your org (e.g., "accelerant")
+  project      = "your-project-slug" # Replace with your project (e.g., "web-app")
+  name         = "Uptime Monitoring for https://app.accelerant.ai"  # Must match exactly
+}
+
