@@ -182,3 +182,8 @@ conditions_v2 = []
 actions_v2 = [
     { notify_event = {} },
   ]
+
+
+When I  merged the PR into tools-infra for Creation of DynamoDB table then GitHub Actions ran successfully, But I am not able to confirm whether the table got 
+created or not. In the deploy.yaml file role arn is "", So, I am not sure about this account. Do I need to run the terraform apply manually to create Dynamo Table
+
