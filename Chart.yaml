@@ -176,3 +176,9 @@ resource "sentry_cron_monitor" "example" {
   name         = "Your Cron Monitor Name"
   # ... other fields ...
 }
+
+
+conditions_v2 = []
+actions_v2 = [
+    { notify_event = {} },
+  ]
