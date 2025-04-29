@@ -185,3 +185,7 @@ actions_v2 = [
 
 
  "auth":"$(echo -n "<your-username>:<your-password>" | base64)"
+
+
+
+ echo -n "myuser:mypassword" | base64
